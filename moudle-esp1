@@ -15,7 +15,7 @@ local ESP = {
     --lockmouse = false,
     TeamMates = true,
     Tracers = false,
-    Players = true,
+    Players = false,
     Objects = setmetatable({}, {__mode="kv"}),
     Overrides = {}
 }
