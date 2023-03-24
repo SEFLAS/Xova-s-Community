@@ -1,2 +1,1 @@
-local v = {"1.0.1"}
-return v
+local version = {"1.0.1"} return version
