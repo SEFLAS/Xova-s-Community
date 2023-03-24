@@ -1,1 +1,1 @@
-local version = {"1.0.1"} return version
+local version = {"1.0.1","module"} return version
