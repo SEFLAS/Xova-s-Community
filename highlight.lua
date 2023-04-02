@@ -1,27 +1,6 @@
---[[
-    higlight.lua v0.0.1 by exxtremewa#9394
-    
-    Features:
-     - uses the power of fancy syntax detection algorithms to convert a frame into a syntax highlighted high quality code box
-     - is cool
-]]
-
 local TextService = game:GetService("TextService")
 local RunService = game:GetService("RunService")
---- The Highlight class
---- @class Highlight
 local Highlight = {}
-
--- PRIVATE METHODS/PROPERTIES --
-
---[[
-    Char Object:
-    {
-        Char: string -- A single character
-        Color: Color3 -- The intended color of the char
-        Line: number -- The line number
-    }
-]]
 
 local parentFrame
 local scrollingFrame
@@ -29,7 +8,6 @@ local textFrame
 local lineNumbersFrame
 local lines = {}
 
---- Contents of the table- array of char objects
 local tableContents = {}
 
 local line = 0
@@ -71,20 +49,6 @@ function isOffLimits(index)
 	end
 	return false
 end
-
---- Find iterator
--- function gfind(str, pattern)
---     local start = 0
---     return function()
---         local findStart, findEnd = str:find(pattern, start)
---         if findStart and findEnd ~= #str then
---             start = findEnd + 1
---             return findStart, findEnd
---         else
---             return nil
---         end
---     end
--- end
 
 --- Find iterator
 function gfind(str, pattern)
@@ -383,6 +347,8 @@ function Highlight:init(frame)
 		scrollingFrame.BackgroundColor3 = backgroundColor
 		scrollingFrame.BorderSizePixel = 0
 		scrollingFrame.ScrollBarThickness = 4
+		scrollingFrame.TopImage = ""
+                scrollingFrame.BottomImage = ""
 
 		textFrame.Name = ""
 		textFrame.Size = UDim2.new(1, -40, 1, 0)
